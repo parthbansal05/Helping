@@ -1,26 +1,12 @@
-#21 rooms   20 switches per room    
-
-
-
-# import cv2
-# import numpy as np
+# parth bansal
+# https://github.com/parthbansal05
 import time
-# import os
-# # import RPi.GPIO as GPIO
-# import datetime
-# import array
-# import shutil
-# from pathlib import Path
 import socket
-# import sys
 from _thread import *
-# import random
 from flask import Flask, request, render_template
    
 a=b=0 
-        
 
-        
 def webhost(a,b):
     ip=socket.gethostbyname(socket.gethostname())
     global an
@@ -47,17 +33,8 @@ def webhost(a,b):
         
         return render_template('a.html', age=an, bge=an1, cge=an2, dge=an3,ege=an4 ,fge=an5)
 
-
-
-
-
-
-
     app.debug = False
     app.run(host='127.0.0.1')
-
-
-
 
 start_new_thread(webhost,(a,b))
 while True:
