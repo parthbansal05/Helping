@@ -2,7 +2,6 @@ from server_pkg.app import create_app,db
 from flask_migrate import upgrade,migrate,init,stamp
 from server_pkg.models import User
 from server_pkg.app import bcrypt
-from SQL import SQL
 import os
 
 def deploy():
@@ -36,9 +35,3 @@ def init_admin():
 	db.session.commit()
 
 init_admin()
-
-def sql_init():
-	sql = SQL()
-	sql.TableCreation()
-
-# sql_init()
